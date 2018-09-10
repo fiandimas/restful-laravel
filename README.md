@@ -1,7 +1,7 @@
 How to use it
 
 1. Download and install composer
-2. Download and install postman
+2. Download and install postmant
 2. Create new database called "restful-laravel"
 3. Import restful-laravel.sql to resful-laravel database
 4. Copy .env.example to .env
@@ -14,10 +14,10 @@ How to use it
 The Router
 
 Get Router
-localhost:8000/kontak --> Show all data
-localhost:8000/kontak/id --> Show the data by ID
+1. localhost:8000/kontak --> Show all data
+2. localhost:8000/kontak/id --> Show the data by ID
 
 Post Router
-localhost:8000/kontak/store --> Create new data
-localhost:8000/kontak/update/id --> Update the data
-localhost:8000/kontak/destroy/id --> Delete the data
+1. localhost:8000/kontak/store --> Create new data
+2. localhost:8000/kontak/update/id --> Update the data
+3. localhost:8000/kontak/destroy/id --> Delete the data
