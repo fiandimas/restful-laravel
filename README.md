@@ -9,7 +9,8 @@ How to use it
 6. Open your cmd and set destination to this project
 7. Run "composer install"
 8. Run "php artisan key:generate"
-9. Enjoy
+9. Open you postman and
+10. Enjoy
 
 The Router
 
