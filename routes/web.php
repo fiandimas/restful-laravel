@@ -19,3 +19,4 @@ Route::get('/kontak/{id}','ControllerKotak@show');
 Route::post('/kontak/store','ControllerKotak@store');
 Route::post('/kontak/update/{id}','ControllerKotak@update');
 Route::post('/kontak/destroy/{id}','ControllerKotak@destroy');
+ 
