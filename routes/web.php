@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Get route
+Route::get('/kontak','ControllerKotak@index');
+Route::get('/kontak/{id}','ControllerKotak@show');
+
+// Post route
+Route::post('/kontak/store','ControllerKotak@store');
+Route::post('/kontak/update/{id}','ControllerKotak@update');
+Route::post('/kontak/destroy/{id}','ControllerKotak@destroy');
