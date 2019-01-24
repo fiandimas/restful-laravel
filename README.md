@@ -12,8 +12,8 @@ How to use this
 7. Run "composer install"
 8. Run "php artisan key:generate"
 9. Run "php artisan serve"
-9. Open you postman and
-10. Enjoy
+10. Open you postman and
+11. Enjoy
 
 The Router
 
