@@ -8,10 +8,11 @@ How to use this
 3. Import laravel-restful-api.sql in phpmyadmin
 4. Copy .env.example to .env
 5. Edit .env add mysql connection
-6. Open you cmd and set destination to this project
+6. Open your cmd and set destination to this project
 7. Run "composer install"
 8. Run "php artisan key:generate"
 9. Run "php artisan serve"
+9. Open you postman and
 10. Enjoy
 
 The Router
