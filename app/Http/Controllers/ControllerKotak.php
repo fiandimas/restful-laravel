@@ -86,7 +86,7 @@ class ControllerKotak extends Controller
         // Select data from kontak by id
         $data = $kontak::where('id',$id)->first();
 
-        if(count($data) > 0){
+        if($data){
             // Set response for true condition
             $res['message'] = 'Success!';
             $res['values'] = $data;
@@ -156,7 +156,7 @@ class ControllerKotak extends Controller
         // Select data by id
         $kontak = Kontak::where('id',$id)->first();
         // Check if data available
-        if(count($kontak) > 0){
+        if($kontak){
             // Delete data and set response for true condition
             $kontak->delete();
             $res['message'] = 'Success!';

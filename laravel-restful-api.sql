@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 10, 2018 at 10:25 AM
--- Server version: 10.1.34-MariaDB
--- PHP Version: 7.1.19
+-- Host: localhost
+-- Generation Time: Jan 24, 2019 at 01:34 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `restful-api`
+-- Database: `laravel-restful-api`
 --
 
 -- --------------------------------------------------------
@@ -62,58 +62,8 @@ INSERT INTO `kontaks` (`id`, `name`, `email`, `address`, `phonenumber`, `created
 (18, 'Crawford O\'Connell', 'richard86@gmail.com', '3458 Veum Springs Suite 781\nWest Martinetown, ID 80948', '302.471.7669', NULL, NULL),
 (19, 'Prof. Maegan Kling', 'ladarius.wisoky@yahoo.com', '872 Tod Grove Apt. 752\nNew Emory, MS 45392', '981.881.8158', NULL, NULL),
 (20, 'Prof. Lauren Gutkowski', 'roxanne.sipes@bode.net', '2080 Ernser Garden\nHauckshire, ME 62050-8848', '(203) 650-1911', NULL, NULL),
-(21, 'Liz Scarlet', 'crowleyesd@gmailcom', 'Jln. Danau Towuti IV 0092', '087859244811', '2018-09-09 20:33:03', '2018-09-09 20:33:29'),
-(22, 'Alfian Dimas Sugara', 'kidaliez@gmailcom', 'Jln. Danau Towuti IV', '082140307911', '2018-09-09 20:41:04', '2018-09-09 20:41:04');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `migrations`
---
-
-CREATE TABLE `migrations` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `migrations`
---
-
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2018_09_10_025844_create_kontaks_table', 2);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `password_resets`
---
-
-CREATE TABLE `password_resets` (
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+(21, 'Liz Scarlet', 'crowleyesd@gmailcom', 'Jln. Danau Towuti IV 0092', '087859244811', '2018-09-09 13:33:03', '2018-09-09 13:33:29'),
+(22, 'Alfian Dimas Sugara', 'kidaliez@gmailcom', 'Jln. Danau Towuti IV', '082140307911', '2018-09-09 13:41:04', '2018-09-09 13:41:04');
 
 --
 -- Indexes for dumped tables
@@ -126,25 +76,6 @@ ALTER TABLE `kontaks`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
---
-ALTER TABLE `migrations`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `password_resets`
---
-ALTER TABLE `password_resets`
-  ADD KEY `password_resets_email_index` (`email`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `users_email_unique` (`email`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -153,18 +84,6 @@ ALTER TABLE `users`
 --
 ALTER TABLE `kontaks`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
-
---
--- AUTO_INCREMENT for table `migrations`
---
-ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
