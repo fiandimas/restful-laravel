@@ -5,21 +5,21 @@ How to use this
 
 1. Download and install composer
 2. Download and install postmant
-3. Import laravel-restful-api.sql in phpmyadmin
 4. Copy .env.example to .env
 5. Edit .env add mysql connection
 6. Open your cmd and set destination to this project
 7. Run "composer install"
 8. Run "php artisan key:generate"
-9. Run "php artisan serve"
-10. Open you postman and
-11. Enjoy
+9. Run "php artisan migrate"
+10. Run "php artisan db:seed"
+11. Run "php artisan serve"
+12. Open you postman and
+13. Enjoy
 
-The Router
+Route
 
-Post Router
-1. localhost:8000/kontak --> Show all data
-2. localhost:8000/kontak/id --> Show the data by ID
-3. localhost:8000/kontak/store --> Create new data
-4. localhost:8000/kontak/update/id --> Update the data
-5. localhost:8000/kontak/destroy/id --> Delete the data
+1. #GET localhost:8000/api/users --> Show all user
+2. #GET localhost:8000/api/user/{id} --> Show user by ID
+3. #POST localhost:8000/api/user --> Create new user
+4. #PUT localhost:8000/api/user/{id} --> Update data by ID
+5. #DELETE localhost:8000/api/user/[id} --> Delete data by ID

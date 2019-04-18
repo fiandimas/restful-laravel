@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\User;
+use Faker\Factory as Faker;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,16 +14,18 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-        
-        $faker = Faker\Factory::create();
+
+        $faker = Faker::create('id_ID');
+
 
         for($i=0;$i<20;$i++){
-        	DB::table('kontaks')->insert([
-        		'name'	=> $faker->name,
-        		'email'	=> $faker->email,
-        		'address'	=> $faker->address,
-        		'phonenumber'	=> $faker->phonenumber
-        	]);
+        	User::create([
+                'name' => $faker->name,
+        		'email' => $faker->email,
+        		'job' => $faker->jobTitle,
+        		'age' => $faker->numberBetween(25,40),
+                'address' => $faker->address,
+            ]);
         }
     }
 }
